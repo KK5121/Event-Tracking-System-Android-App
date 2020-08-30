@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.event">
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.example.event.GlobalClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.example.event.MainActivity">
+        </activity>
+        <activity
+            android:name="com.example.event.Reg"
+            android:label="@string/title_activity_reg" >
+        </activity>
+        <activity
+            android:name="com.example.event.Login"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="com.example.event.Guest"
+            android:label="@string/title_activity_guest" >
+        </activity>
+        <activity
+            android:name="com.example.event.Admin"
+            android:label="@string/title_activity_admin" >
+        </activity>
+        <activity
+            android:name="com.example.event.Manageevents"
+            android:label="@string/title_activity_manageevents" >
+        </activity>
+        <activity
+            android:name="com.example.event.Addevent"
+            android:label="@string/title_activity_addevent" >
+        </activity>
+        <activity
+            android:name="com.example.event.Deleteuser"
+            android:label="@string/title_activity_deleteuser" >
+        </activity>
+        <activity
+            android:name="com.example.event.User"
+            android:label="@string/title_activity_user" >
+        </activity>
+        <activity
+            android:name="com.example.event.Registerevent"
+            android:label="@string/title_activity_registerevent" >
+        </activity>
+        <activity
+            android:name="com.example.event.FirstScreen"
+            android:label="@string/title_activity_first_screen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.event.Scroll"
+            android:label="@string/title_activity_scroll" >
+        </activity>
+        <activity
+            android:name="com.example.event.Viewuser"
+            android:label="@string/title_activity_viewuser" >
+        </activity>
+        <activity
+            android:name="com.example.event.Deleteevent"
+            android:label="@string/title_activity_deleteevent" >
+        </activity>
+        <activity
+            android:name="com.example.event.Guestevent"
+            android:label="@string/title_activity_guestevent" >
+        </activity>
+        <activity
+            android:name="com.example.event.Guestview"
+            android:label="@string/title_activity_guestview" >
+        </activity>
+        <activity
+            android:name="com.example.event.Map"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity android:name=".FingerprintHandler"></activity>
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".FingerprintActivity">
+        </activity>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyC7d2Fz7xMgEeTunCwS_w3KqU3yaxqNtd8" />
+    </application>
+
+</manifest>
